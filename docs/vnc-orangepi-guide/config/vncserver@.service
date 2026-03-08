@@ -1,0 +1,17 @@
+[Unit]
+Description=TigerVNC Server for display %i
+After=syslog.target network-online.target
+Wants=network-online.target
+
+[Service]
+Type=forking
+User=USUARIO
+Group=USUARIO
+WorkingDirectory=/home/USUARIO
+
+ExecStartPre=/bin/sh -c '/usr/bin/vncserver -kill :%i > /dev/null 2>&1 || :'
+ExecStart=/usr/bin/vncserver :%i -geometry 1920x1080 -depth 24
+ExecStop=/usr/bin/vncserver -kill :%i
+
+[Install]
+WantedBy=multi-user.target

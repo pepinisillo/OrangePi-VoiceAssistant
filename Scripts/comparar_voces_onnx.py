@@ -24,11 +24,11 @@ import tempfile
 from pathlib import Path
 
 
-# ─── Configuración (edita aquí las rutas; la terminal puede sobreescribirlas) ───
+# ─── Configuración (rutas y parámetros; la terminal puede sobreescribirlas) ───
 RUTA_WAVS = Path("/home/pepin/Downloads/mercy/wav")
 RUTA_CSV = Path("/home/pepin/Downloads/mercy/metadata.csv")
 
-# O una sola carpeta donde estén todos los .onnx (usa esto o RUTAS_ONNX, no ambos):
+# Una sola carpeta donde estén todos los .onnx:
 RUTA_CARPETA_ONNX = Path("/home/pepin/Downloads/piper/src/python/mercy")
 RUTA_SALIDA = Path("/home/pepin/Downloads/piper/src/python/mercy/RES")
 MAX_FRASES = 15

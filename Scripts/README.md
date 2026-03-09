@@ -15,7 +15,6 @@ Scripts de apoyo para preparar datasets de voz (Piper TTS), verificar transcripc
 | [listar.py](#listarpy) | Lista pares .ogg + .txt en una carpeta |
 | [detectar_txt_vacio.py](#detectar_txt_vaciopy) | Detecta archivos .txt vacíos |
 | [copiar_a.py](#copiar_apy) | Copia pares .ogg + .txt renombrados (clip_0001, clip_0002…) |
-| [main.py](#mainpy) | Plantilla de PyCharm (sin uso en el flujo del proyecto) |
 
 ---
 
@@ -177,14 +176,6 @@ python copiar_a.py
 ```
 
 Solo se copian los .ogg que tienen .txt asociado con el mismo nombre.
-
----
-
-## main.py
-
-**Archivo:** [main.py](main.py)
-
-Plantilla por defecto de PyCharm (`print_hi('PyCharm')`). No forma parte del flujo de preparación de datos ni de Piper; se puede ignorar o eliminar.
 
 ---
 

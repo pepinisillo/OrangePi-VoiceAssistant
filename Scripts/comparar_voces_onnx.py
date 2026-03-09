@@ -250,8 +250,6 @@ def main() -> None:
         # Usar configuración del código
         if RUTA_CARPETA_ONNX and RUTA_CARPETA_ONNX.exists():
             onnx_list = sorted(Path(RUTA_CARPETA_ONNX).resolve().glob("*.onnx"))
-        else:
-            onnx_list = [Path(p).resolve() for p in RUTAS_ONNX if Path(p).exists() and Path(p).suffix.lower() == ".onnx"]
     if not onnx_list:
         print("ERROR: No hay ningún .onnx. Indica rutas en el código (RUTAS_ONNX o RUTA_CARPETA_ONNX) o usa --onnx / --onnx-dir.")
         sys.exit(1)
@@ -326,7 +324,7 @@ def main() -> None:
 
         if merge and (original_wav or voces):
             try:
-                from pydub import AudioSegment
+                from pydub import AudioSegment  # type: ignore
                 silencio = AudioSegment.silent(duration=500)
                 segmentos = []
                 if original_wav:
